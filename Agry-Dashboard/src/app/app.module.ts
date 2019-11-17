@@ -9,6 +9,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ListModalComponent } from './list-modal/list-modal.component';
 import { DetailModalComponent } from './detail-modal/detail-modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MAdminComponent } from './m-admin/m-admin.component';
+import { MUserComponent } from './m-user/m-user.component';
+import { MPlantComponent } from './m-plant/m-plant.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     ListModalComponent,
     DetailModalComponent,
+    DashboardComponent,
+    MAdminComponent,
+    MUserComponent,
+    MPlantComponent,
   ],
   
   imports: [
