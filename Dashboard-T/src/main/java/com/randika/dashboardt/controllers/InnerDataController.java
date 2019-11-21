@@ -47,5 +47,6 @@ public class InnerDataController {
 		innerData = theInnerDataModel.getInnerData();
 		System.out.println("Inner data : " +innerData );
 		return innerData;
-	}	
+	}
+	
 }

@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { InnerData } from './app-innerData';
 
 @Injectable({
     providedIn: "root"
@@ -14,11 +13,13 @@ export class AppServiceService {
 
     constructor(private http: HttpClient) {}
 
-    getOuterData(): Observable<InnerData[]> {
-      return this.http.get<InnerData[]>("${this.OuterDataURL}");
+    getOuterData() {
+        console.log(this.http.get(this.OuterDataURL));
+        return this.http.get(this.OuterDataURL);
     }
 
-    getInnerData(): Observable<InnerData[]> {
-        return this.http.get<InnerData[]>("${this.InnerDataURL}");
+    getInnerData() {
+        console.log(this.http.get(this.InnerDataURL));
+        return this.http.get(this.InnerDataURL);
     }
 }

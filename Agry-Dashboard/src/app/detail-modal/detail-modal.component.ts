@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppServiceService } from '../app-service.service';
 import { Router } from '@angular/router';
-import { InnerData } from '../app-innerData';
 
 @Component({
   selector: '.app-detail-modal',
@@ -22,7 +21,10 @@ export class DetailModalComponent implements OnInit {
   }
 
   reloadingData() {
-    this.innerData = this.service.getInnerData();
+    this.innerData = this.service.getInnerData().subscribe(data=>{
+      console.log(data);
+    });
+    console.log(this.service.getInnerData());
   }
 
 }
