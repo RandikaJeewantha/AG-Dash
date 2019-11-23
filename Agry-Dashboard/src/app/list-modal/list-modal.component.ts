@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: '.app-list-modal',
@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListModalComponent implements OnInit {
 
+  fullDetail: any;
+
   constructor() { }
 
   ngOnInit() { }
 
-  title = 'hi';
+  @Input() listDetails: any;
+
+  FullDetails(Details) {
+    this.fullDetail = Details;
+  }
 
 }

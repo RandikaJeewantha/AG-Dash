@@ -10,30 +10,30 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import com.randika.dashboardt.models.PlantDataModel;
+import com.randika.dashboardt.models.EssentialPlantDataModel;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-public class PlantDataController {
+public class EssentialPlantDataController {
 	
 	@Autowired
-	PlantDataModel thePlantDataModel;
+	EssentialPlantDataModel theEssentialPlantDataModel;
 	
-	Object plantData;
+	Object essentialPlantData;
 	
-	@RequestMapping("PlantData")
+	@RequestMapping("EssentialPlantData")
 	public Object theOuterDataController() throws InterruptedException {
 		
 		final FirebaseDatabase database = FirebaseDatabase.getInstance();
-		DatabaseReference ref = database.getReference("/PlantData/Tomato-01");
+		DatabaseReference ref = database.getReference("/PlantData/Tomato");
 		
 		ref.addValueEventListener(new ValueEventListener() {
 			
 			@Override
 			public void onDataChange(DataSnapshot dataSnapshot) {
 				
-				Object plantData = dataSnapshot.getValue();
-				thePlantDataModel.setPlantData(plantData);
+				Object essentialPlantData = dataSnapshot.getValue();
+				theEssentialPlantDataModel.setEssentialPlantData(essentialPlantData);
 			}
 			
 			@Override
@@ -44,8 +44,8 @@ public class PlantDataController {
 				
 		});
 		
-		plantData = thePlantDataModel.getPlantData();
-		System.out.println("Plant Data : " +plantData );
-		return plantData;
+		essentialPlantData = theEssentialPlantDataModel.getEssentialPlantData();
+		System.out.println("Essential Plant Data : " +essentialPlantData );
+		return essentialPlantData;
 	}	
 }

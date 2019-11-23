@@ -1,8 +1,6 @@
 <div class="app-nav-bar"></div>
 
-<div class="app-list-modal"></div>
-
-<div class="app-detail-modal"></div>
+<div class="app-list-modal" [listDetails] = listDetails></div>
 
 <div class="container">
 
@@ -13,18 +11,18 @@
             <div class="row">
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <button type="button" class="btn more summery" data-toggle="modal"
-                        data-target="#modal-list">Categories : </button>
+                    <button (click)="Categories()" type="button" class="btn more summery" data-toggle="modal"
+                        data-target="#modal-list">Categories : 01</button>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <button type="button" class="btn more summery" data-toggle="modal" data-target="#modal-list">Plants
-                        : </button>
+                    <button (click)="Plants()" type="button" class="btn more summery" data-toggle="modal" data-target="#modal-list">Plants
+                        : 01</button>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <button type="button" class="btn more summery" data-toggle="modal"
-                        data-target="#modal-list">Indicaters : </button>
+                    <button (click)="Indicaters()" type="button" class="btn more summery" data-toggle="modal"
+                        data-target="#modal-list">Indicaters : 06</button>
                 </div>
 
             </div>
@@ -49,15 +47,22 @@
                     <tr>
                         <td>01</td>
                         <td>Tempereture</td>
-                        <td>25</td>
-                        <td>30</td>
+                        <td>{{innerData.Temperature}}</td>
+                        <td>{{outerData.Temperature}}</td>
                     </tr>
 
                     <tr>
                         <td>02</td>
                         <td>Relative humidity</td>
-                        <td>0.5</td>
-                        <td>0.2</td>
+                        <td>{{innerData.RH}}</td>
+                        <td>{{outerData.RH}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>03</td>
+                        <td>Light</td>
+                        <td>{{innerData.Light}}</td>
+                        <td>{{outerData.Light}}</td>
                     </tr>
 
                 </tbody>
@@ -83,27 +88,16 @@
                 <tbody>
                     <tr>
                         <td data-th="#">01</td>
-                        <td data-th="Plant Id">P-A-1</td>
-                        <td data-th="Plant Name">Tomato</td>
-                        <td data-th="PH Value">10</td>
-                        <td data-th="EC Value">0.4</td>
-                        <td data-th="Height">25</td>
+                        <td data-th="Plant Id">{{plantData.ID}}</td>
+                        <td data-th="Plant Name">{{essentialplantData.Name}}</td>
+                        <td data-th="PH Value">{{plantData.PH}}</td>
+                        <td data-th="EC Value">{{plantData.EC}}</td>
+                        <td data-th="Height">{{plantData.Height}}</td>
                         <td data-th="More Details">
                             <button class="more" data-toggle="modal" data-target="#modal-detail">More</button>
                         </td>
                     </tr>
 
-                    <tr>
-                        <td data-th="#">02</td>
-                        <td data-th="Plant Id">P-A-2</td>
-                        <td data-th="Plant Name">Tomato</td>
-                        <td data-th="PH Value">10</td>
-                        <td data-th="EC Value">0.4</td>
-                        <td data-th="Height">25</td>
-                        <td data-th="More Details">
-                            <button class="more" data-toggle="modal" data-target="#modal-detail">More</button>
-                        </td>
-                    </tr>
                 </tbody>
 
             </table>

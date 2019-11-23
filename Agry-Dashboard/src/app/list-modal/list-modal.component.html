@@ -1,26 +1,35 @@
+<div class="app-detail-modal" [fullDetail]="fullDetail"></div>
+
 <div class="modal" tabindex=-1 role="dialog" id="modal-list">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header btn-dark">
-                <h5 class="modal-title">Plants {{title}}</h5>
-    
+                <div *ngFor="let value of listDetails; let first = first;" [ngClass]="{ first: first }">
+                    <h5 class="modal-title" *ngIf="first">{{value}}</h5>
+                </div>
+
                 <button type="button" class="close" data-dismiss="modal" area-label="close">
                     <span area-hidden="true">&times;</span>
                 </button>
-                
+
             </div>
-    
+
             <div class="modal-body">
-                <button type="button" class="btn btn-success col-12" data-toggle="modal" data-target="#modal-detail">Tomato</button><br><br>
-                <button type="button" class="btn btn-success col-12" data-toggle="modal" data-target="#modal-detail">Chili</button><br><br>
-                <button type="button" class="btn btn-success col-12" data-toggle="modal" data-target="#modal-detail">Carrot</button><br><br>
-                <button type="button" class="btn btn-success col-12" data-toggle="modal" data-target="#modal-detail">Beans</button><br><br>
+                <table class="col-12">
+                    <tr *ngFor="let value of listDetails; let first = first;" [ngClass]="{ first: first }"
+                        class="col-12">
+                        <td class="col-12" *ngIf="!first">
+                            <button (click)="FullDetails(value)" type="button" class="btn btn-success col-12"
+                                data-toggle="modal" data-target="#modal-detail">{{value}}</button><br><br>
+                        </td>
+                    </tr>
+                </table>
             </div>
-    
+
             <div class="modal-footer btn-dark">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">close</button>
             </div>
-    
-        </div> 
+
+        </div>
     </div>
 </div>

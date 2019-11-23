@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { MAdminComponent } from './m-admin/m-admin.component';
 import { MPlantComponent } from './m-plant/m-plant.component';
 import { MUserComponent } from './m-user/m-user.component';
+import { DetailModalComponent } from './detail-modal/detail-modal.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent},
   { path: 'MAdmin', component: MAdminComponent},
   { path: 'Mplant', component: MPlantComponent},
-  { path: 'MUser', component: MUserComponent}
+  { path: 'MUser', component: MUserComponent},
+  { path: 'DModel', component: DetailModalComponent}
 ];
 
 @NgModule({

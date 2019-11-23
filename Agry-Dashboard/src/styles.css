@@ -9,7 +9,6 @@ body {
 @media screen and (max-width: 540px) {
 
     body {
-        background-image: none;
         background-color: black;
     }
 }

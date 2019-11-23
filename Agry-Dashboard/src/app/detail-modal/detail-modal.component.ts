@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AppServiceService } from '../app-service.service';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: '.app-detail-modal',
@@ -9,22 +6,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./detail-modal.component.css']
 })
 export class DetailModalComponent implements OnInit {
+  
+  @Input() fullDetails : any;
+  
+  constructor() { }
 
-  innerData: any;
-
-  constructor(private service: AppServiceService, private router: Router) {
-    console.log(this.innerData);
-  }
-
-  ngOnInit() {
-    this.reloadingData();
-  }
-
-  reloadingData() {
-    this.innerData = this.service.getInnerData().subscribe(data=>{
-      console.log(data);
-    });
-    console.log(this.service.getInnerData());
-  }
-
+  ngOnInit(): void {}
+  
 }
