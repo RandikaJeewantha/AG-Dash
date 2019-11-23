@@ -7,16 +7,10 @@ import { Component, OnInit, Input} from '@angular/core';
 })
 export class ListModalComponent implements OnInit {
 
-  fullDetail: any;
-
   constructor() { }
 
   ngOnInit() { }
 
   @Input() listDetails: any;
-
-  FullDetails(Details) {
-    this.fullDetail = Details;
-  }
 
 }

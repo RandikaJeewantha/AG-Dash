@@ -2,6 +2,8 @@
 
 <div class="app-list-modal" [listDetails] = listDetails></div>
 
+<div class="app-detail-modal" [fullDetails]= fullDetails></div>
+
 <div class="container">
 
     <div class="row">
@@ -94,7 +96,7 @@
                         <td data-th="EC Value">{{plantData.EC}}</td>
                         <td data-th="Height">{{plantData.Height}}</td>
                         <td data-th="More Details">
-                            <button class="more" data-toggle="modal" data-target="#modal-detail">More</button>
+                            <button (click)="FullDetails()" class="more" data-toggle="modal" data-target="#modal-detail">More</button>
                         </td>
                     </tr>
 

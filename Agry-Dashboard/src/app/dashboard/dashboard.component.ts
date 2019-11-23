@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   plantData: any;
   essentialplantData: any;
   listDetails: any;
+  fullDetails: any;
 
   constructor(private service: AppServiceService, private router: Router) { }
 
@@ -54,6 +55,10 @@ export class DashboardComponent implements OnInit {
 
   Indicaters() {
     this.listDetails = ["Indicaters", "PH", "Height", " Relative Humidity", "Temperature", "Light", "Electric Conductivity"];
+  }
+
+  FullDetails() {
+    this.fullDetails = [this.plantData, this.essentialplantData];
   }
 
 }
