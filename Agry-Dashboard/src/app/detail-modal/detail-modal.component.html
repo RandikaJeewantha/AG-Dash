@@ -13,11 +13,55 @@
             </div>
     
             <div class="modal-body">
-                <ol>
-                    <li>test</li>
-                    <li>test</li>
-                    <li>test</li>
-                </ol>
+                <table class="plant-data">
+
+                    <thead>
+                        <th>Feature</th>
+                        <th>Essentials</th>
+                        <th>Currents</th>
+                    </thead>
+    
+                    <tbody>
+                
+                        <tr>
+                            <td data-th="Temperature">Temperature</td>
+                            <td data-th="Essentials">{{essentialplantData.Temperature}}</td>
+                            <td data-th="Currents">{{innerData.Temperature}}</td>
+                        </tr>
+
+                        <tr>
+                            <td data-th="Light">Light</td>
+                            <td data-th="Essentials">{{essentialplantData.Light}}</td>
+                            <td data-th="Currents">{{innerData.Light}}</td>
+                        </tr>
+
+                        <tr>
+                            <td data-th="Relative Humidity">Relative Humidity</td>
+                            <td data-th="Essentials">{{essentialplantData.RH}}</td>
+                            <td data-th="Currents">{{innerData.RH}}</td>
+                        </tr>
+
+                        <tr>
+                            <td data-th="PH">PH</td>
+                            <td data-th="Essentials">{{essentialplantData.PH}}</td>
+                            <td data-th="Currents">{{plantData.PH}}</td>
+                        </tr>
+
+                        <tr>
+                            <td data-th="Electric Conductivity">Electric Conductivity</td>
+                            <td data-th="Essentials">{{essentialplantData.EC}}</td>
+                            <td data-th="Currents">{{plantData.EC}}</td>
+                        </tr>
+
+                        <tr>
+                            <td data-th="Height">Height</td>
+                            <td data-th="Essentials">{{essentialplantData.Height}}</td>
+                            <td data-th="Currents">{{plantData.Height}}</td>
+                        </tr>
+    
+                    </tbody>
+    
+                </table>
             </div>
     
             <div class="modal-footer btn-secondary">

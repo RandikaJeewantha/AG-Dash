@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppServiceService } from '../app-service.service';
 
 @Component({
   selector: 'app-m-plant',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MPlantComponent implements OnInit {
 
-  constructor() { }
+  categories = ["Tomato"];
+  essentialplantData: any;
+  plantCategory: any;
 
-  ngOnInit() {
+  constructor(private service: AppServiceService) {
+    this.essentialplantData = "";
+  }
+
+  ngOnInit() { }
+
+  category(plantCategory: any) {
+
+    this.plantCategory = plantCategory
+
+    if (this.plantCategory == "Tomato") {
+      this.essentialplantData = this.service.getEssentialPlantData().subscribe(data => {
+        this.essentialplantData = data;
+      });
+    }
+
+    else {
+      this.essentialplantData = "";
+    }
   }
 
 }

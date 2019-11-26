@@ -96,7 +96,7 @@
                         <td data-th="EC Value">{{plantData.EC}}</td>
                         <td data-th="Height">{{plantData.Height}}</td>
                         <td data-th="More Details">
-                            <button (click)="FullDetails()" class="more" data-toggle="modal" data-target="#modal-detail">More</button>
+                            <button (click)="FullDetails(plantData.ID)" class="more" data-toggle="modal" data-target="#modal-detail">More</button>
                         </td>
                     </tr>
 

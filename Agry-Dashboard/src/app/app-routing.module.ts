@@ -10,6 +10,7 @@ import { DetailModalComponent } from './detail-modal/detail-modal.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full'},
+  { path: 'AdminPanel', redirectTo: 'Mplant', pathMatch: 'full'},
   { path: 'AdminPanel', component: AdminAgryComponent },
   { path: 'Dashboard', component: DashboardComponent},
   { path: 'Login', component: LoginComponent},

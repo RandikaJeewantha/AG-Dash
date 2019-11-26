@@ -57,8 +57,8 @@ export class DashboardComponent implements OnInit {
     this.listDetails = ["Indicaters", "PH", "Height", " Relative Humidity", "Temperature", "Light", "Electric Conductivity"];
   }
 
-  FullDetails() {
-    this.fullDetails = [this.plantData, this.essentialplantData];
+  FullDetails(id) {
+    this.fullDetails = id;
   }
 
 }

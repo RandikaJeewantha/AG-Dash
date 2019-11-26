@@ -1,0 +1,35 @@
+.plant-data {
+    margin: 1em 0;
+    width: 100%;
+    overflow: hidden;
+    background: #FFF;
+    color: #024457;
+    border-radius: 10px;
+    border: 1px solid #167F92;
+}
+
+.plant-data tr {
+    border: 1px solid #D9E4E6;
+}
+  
+.plant-data tr:nth-child(odd) {
+    background-color: #EAF3F3;
+}
+
+.plant-data th {
+    display: table-cell;
+    text-align: center;
+    border: 1px solid #FFF;
+    background-color: #167F92;
+    color: #FFF;
+    padding: 1em;
+}
+
+.plant-data td {
+    display: table-cell;
+    word-wrap: break-word;
+    max-width: 7em;
+    text-align: center;
+    border-right: 1px solid #D9E4E6;
+    padding: 10px;
+}

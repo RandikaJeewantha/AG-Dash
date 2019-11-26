@@ -7,29 +7,31 @@
 
             <h2>Essential Data</h2>
 
+            <div class="input-group">
+                <select class="custom-select" (change)="category($event.target.value)">
+                    <option selected value="0">Choose...</option>
+                    <option *ngFor="let category of categories" value={{category}}>{{category}}</option>
+                </select>
+            </div><br>
+
             <form action="" method="post">
-                <h5>PH</h5>
-                <input type="text" name="" id="" placeholder="PH : 25"
+
+                <input type="number" name="" id="" placeholder="Electric Conductivity : {{essentialplantData.EC}}"
                     class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
-                <h5>PH</h5>
-                <input type="text" name="" id="" placeholder="PH : 25"
+                <input type="number" name="" id="" placeholder="Height : {{essentialplantData.Height}}"
                     class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
-                <h5>PH</h5>
-                <input type="text" name="" id="" placeholder="PH : 25"
+                <input type="number" name="" id="" placeholder="Light : {{essentialplantData.Light}}"
                     class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
-                <h5>PH</h5>
-                <input type="text" name="" id="" placeholder="PH : 25"
+                <input type="number" name="" id="" placeholder="PH : {{essentialplantData.PH}}"
                     class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
-                <h5>PH</h5>
-                <input type="text" name="" id="" placeholder="PH : 25"
+                <input type="number" name="" id="" placeholder="Relative Humidity : {{essentialplantData.RH}}"
                     class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
-                <h5>PH</h5>
-                <input type="text" name="" id="" placeholder="PH : 25"
+                <input type="number" name="" id="" placeholder="Temperature : {{essentialplantData.Temperature}}"
                     class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
                 <br><br><input type="submit" value="Modify Data" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
