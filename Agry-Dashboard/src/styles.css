@@ -1,14 +1,8 @@
 body { 
     background: url(cover.jpg) no-repeat; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
-@media screen and (max-width: 540px) {
-
-    body {
-        background-color: black;
-    }
+footer {
+    margin-top: 120px;
+    background-image: radial-gradient(rgba(0, 255, 0, 1),rgba(0, 255, 0, 0), rgba(0, 255, 0, 0));
 }
