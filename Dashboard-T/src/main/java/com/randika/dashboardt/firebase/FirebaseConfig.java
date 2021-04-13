@@ -19,7 +19,7 @@ public class FirebaseConfig {
 		
 		try {
 			serviceAccount = new FileInputStream(
-					"C:\\Users\\Randika Jeewantha\\Documents\\workspace-sts-3.9.9.RELEASE\\agri-project-642f2-firebase-adminsdk-k0iix-d4f94c15ae.json");
+					"C:\\Users\\Randika Jeewantha\\Documents\\workspace-sts-3.9.9.RELEASE\\project-firebase-ainsdkx-d4f94ju75ae.json");
 		} 
 		
 		catch (FileNotFoundException e) {
@@ -31,7 +31,7 @@ public class FirebaseConfig {
 		try {
 			options = new FirebaseOptions.Builder()
 						.setCredentials(GoogleCredentials.fromStream(serviceAccount))
-						.setDatabaseUrl("https://agri-project-642f2.firebaseio.com")
+						.setDatabaseUrl("https://project-.firebaseio.com")
 						.build();
 		} 
 		
